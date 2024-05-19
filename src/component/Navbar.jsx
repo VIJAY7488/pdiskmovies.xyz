@@ -36,7 +36,7 @@ function Navbar() {
         <a href='/webseries'>Web Series</a>
       </li>
       <li className='hover:text-yellow-400'>
-        <a href='/webseries'>Ullu Series</a>
+        <a href='/ulluseries'>Ullu Series</a> {/* Corrected the duplicate link */}
       </li>
     </div>
   );
@@ -44,9 +44,9 @@ function Navbar() {
   return (
     <header>
       {/* Sticky Navbar */}
-      <nav className={`bg-slate-800 justify-evenly navbar ${sticky ? 'sticky-navbar duration-300 transition-all ease-in-out' : ''}`}>
+      <nav className={`bg-slate-800 justify-evenly navbar fixed top-0 z-index-1000 ${sticky ? 'sticky-navbar duration-300 transition-all ease-in-out' : ''}`}>
         <div>
-          <a className="btn btn-ghost text-xl text-white">pdiskmovies.xyz</a>
+          <a className="btn btn-ghost text-xl text-white" href="/">pdiskmovies.xyz</a>
         </div>
         <div className="navbar-end">
           <label className="flex px-3 py-2 border rounded-2xl items-center gap-2 bg-white">
@@ -59,13 +59,13 @@ function Navbar() {
       </nav>
 
       {/* Dropdown Navbar */}
-      <nav className={`bg-blue-500 navbar ${sticky ? 'sticky-navbar duration-300 transition-all ease-in-out' : ''}`}>
+      <nav className={`bg-blue-500 navbar fixed top-16 ${sticky ? 'sticky-navbar duration-300 transition-all ease-in-out' : ''}`}>
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
+          <button tabIndex={0} className="btn btn-ghost lg:hidden text-white">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
-          </div>
+          </button>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
             {navItems}
           </ul>

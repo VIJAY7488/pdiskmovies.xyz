@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 import Navbar from './component/Navbar'
 import Banner from './component/Banner'
 import NewMovies01 from './component/NewMovies01'
