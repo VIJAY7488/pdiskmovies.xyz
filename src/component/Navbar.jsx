@@ -44,7 +44,7 @@ function Navbar() {
   return (
     <header>
       {/* Sticky Navbar */}
-      <nav className={`bg-slate-800 justify-evenly navbar fixed top-0 z-index-1000 ${sticky ? 'sticky-navbar duration-300 transition-all ease-in-out' : ''}`}>
+      <nav className={`bg-slate-800 justify-evenly navbar fixed top-0 z-50 ${sticky ? 'sticky-navbar duration-300 transition-all ease-in-out' : ''}`}>
         <div>
           <a className="btn btn-ghost text-xl text-white" href="/">pdiskmovies.xyz</a>
         </div>
@@ -59,7 +59,7 @@ function Navbar() {
       </nav>
 
       {/* Dropdown Navbar */}
-      <nav className={`bg-blue-500 navbar fixed top-16 ${sticky ? 'sticky-navbar duration-300 transition-all ease-in-out' : ''}`}>
+      <nav className={`bg-blue-500 navbar fixed top-16 z-50 ${sticky ? 'sticky-navbar duration-300 transition-all ease-in-out' : ''}`}>
         <div className="dropdown">
           <button tabIndex={0} className="btn btn-ghost lg:hidden text-white">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
